@@ -49,6 +49,7 @@ module.exports = (env, argv) => {
     ],
     module: {
       rules: [
+
         {
           test: /\.css$/i,
           use: [MiniCssExtractPlugin.loader, "css-loader"],
@@ -62,6 +63,10 @@ module.exports = (env, argv) => {
               presets: ['@babel/preset-env']
             }
           }
+        },
+        {
+          test: /\.mp3$/,
+          loader: 'file-loader'
         }
       ],
     }
