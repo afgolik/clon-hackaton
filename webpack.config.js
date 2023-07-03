@@ -65,8 +65,8 @@ module.exports = (env, argv) => {
           }
         },
         {
-          test: /\.mp3$/,
-          loader: 'file-loader'
+          test: /\.(png|svg|jpg|jpeg|gif|ogg|mp3|wav)$/i,
+          type: 'asset/resource',
         }
       ],
     }
